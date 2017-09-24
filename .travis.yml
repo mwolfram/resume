@@ -11,7 +11,7 @@ services:
   
 # Run XSLT
 script:
-  - docker run -ti -v $(PWD):/data merijntjetak/latex-moderncv example.tex
+  - docker run merijntjetak/latex-moderncv example.tex
    
 
 #after_success:
