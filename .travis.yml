@@ -9,9 +9,11 @@ services:
 
 #before_script:
   
-# Run XSLT
+# Run converter
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/data merijntjetak/latex-moderncv example.tex
+  # - docker run -v $TRAVIS_BUILD_DIR:/data merijntjetak/latex-moderncv example.tex
+  # - docker run -v $TRAVIS_BUILD_DIR:/opt/resume gabrielruiu/json-resume
+  - docker run -v $TRAVIS_BUILD_DIR:/home/ latrokles/json-resume:latest example.json
    
 
 #after_success:
